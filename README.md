@@ -2,6 +2,12 @@
 
 Personal dotfiles and setup scripts for macOS development.
 
+## Requirements
+
+- macOS
+- Git
+- Homebrew (for `brew bundle`)
+
 ## Quickstart
 
 1. Clone the repo:
@@ -14,8 +20,8 @@ git clone git@github.com:yourname/dotfiles.git ~/Developer/dotfiles
 
 ```bash
 cd ~/Developer/dotfiles
-chmod +x install.sh
-./install.sh
+chmod +x bootstrap.sh
+./bootstrap.sh
 
 source ~/.zshrc
 ```
@@ -25,12 +31,6 @@ source ~/.zshrc
 brew bundle
 ```
 
-## Requirements
-
-- macOS
-- Git
-- Homebrew (for `brew bundle`)
-
 ## Contents
 
 - `Brewfile` — Homebrew packages and casks
@@ -39,12 +39,20 @@ brew bundle
 
 ## Usage
 
-- Run `./install.sh` to symlink config files into your home directory and perform initial setup.
-- Use the aliases in `zsh/aliases.zsh` for quick navigation (e.g. `dev`, `backend`).
+- Run `./bootstrap.sh` to install all tools, link dotfiles, and configure Git and SSH.
+- Use the aliases in `zsh/aliases.zsh` for quick navigation (e.g. `dev`, `backend`, `dotfiles`).
+- Edit config files directly in this repo; changes apply immediately after sourcing `~/.zshrc`.
+
+## Homebrew & Manual Installs
+
+When running `brew bundle`:
+- **Already installed via Homebrew** — skips reinstall.
+- **Manually downloaded or web-installed apps** — `brew bundle` will not detect them; it may install the Homebrew version alongside.
+- **Best practice** — document manually-installed tools separately and list Homebrew-managed packages clearly in `Brewfile`.
 
 ## Notes
 
-- Review `install.sh` before running to understand what will be changed.
+- Review `bootsrap.sh` before running to understand what will be changed.
 - Customize any files after installation to fit your workflow.
+- For apps already installed outside Homebrew, either add them to `Brewfile` (so Homebrew tracks them) or avoid running `brew bundle` for those specific packages.
 
----

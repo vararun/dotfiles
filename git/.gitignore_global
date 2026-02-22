@@ -3,6 +3,3 @@ node_modules
 .env
 coverage
 dist
-
-# ignore this file globally:
-# git config --global core.excludesfile ~/.gitignore_global

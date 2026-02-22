@@ -26,3 +26,5 @@ cask "figma"
 cask "iterm2"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Code editor redefined and optimized for building and debugging modern web and cloud applications
+cask "visual-studio-code"

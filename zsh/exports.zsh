@@ -1,6 +1,9 @@
 # Editor
 export EDITOR="code"
 
+# History
+export HISTFILE="$HOME/.zsh_history"
+
 # Developer folders
 export DEV="$HOME/Developer"
 
