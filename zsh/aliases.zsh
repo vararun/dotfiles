@@ -7,6 +7,7 @@ alias ga="git add -A"
 alias gp="git push"
 alias gpf="git push --force"
 alias gr="git reset"
+alias gac="git add -A && git commit -m"
 
 # general aliases
 alias dev="cd ~/Developer"
