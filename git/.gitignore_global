@@ -1,5 +1,47 @@
+# OS
 .DS_Store
-node_modules
+.DS_Store?
+*.swp
+*.swo
+*~
+
+# IDEs & Editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+.vim/
+
+# Dependencies & Lockfiles (keep only package-lock.json or yarn.lock, uncomment as needed)
+node_modules/
+pnpm-store/
+.pnpm-store/
+
+# Environment
 .env
-coverage
-dist
+.env.local
+.env.*.local
+
+# Build & Output
+dist/
+build/
+.next/
+coverage/
+*.log
+logs/
+
+# Runtime & Caches
+.cache/
+.turbo/
+*.pid
+.vite/
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+
+# Development
+.dev
+.tmp/
+temp/
